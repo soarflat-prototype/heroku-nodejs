@@ -16,10 +16,21 @@ heroku create hogehoge
 ```
 
 ## `git push heroku master`
-Heroku（リモート）にローカルのアプリをプッシュする。
+Heroku（リモートリポジトリ）にローカルのアプリをプッシュする。
 
 ## `heroku open`
 作成したアプリのURLをブラウザで開く。
+
+## `heroku git:remote --app [APP NAME]`
+Herokuのリモートリポジトリを参照する。
+
+例えば「hogehoge」という名前のアプリのリモートリポジトリを参照したい場合、以下のコマンドを実行する。
+
+```bash
+heroku git:remote --app hogehoge
+```
+
+`heroku create`をしたマシンとは別のマシンで`git push heroku master`や`heroku open`などをしたい場合、上記を実行する必要がある。
 
 ## `heroku ps`
 稼働中の`dyno`の数を確認する。
